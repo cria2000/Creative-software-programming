@@ -1,0 +1,95 @@
+#include<iostream>
+#include"my_vector.h"
+#include<stdlib.h>
+using namespace std;
+int main(){
+	int max_num;
+	cin>>max_num;
+	MyVector a(max_num);
+	MyVector b(max_num);
+	cout<<"enter a"<<endl;
+	cin>>a;
+	cout<<"enter b"<<endl;
+	cin>>b;
+	string vec_a, vec_b;
+	string op;
+	while(true){
+		cin>>vec_a;
+		if(vec_a=="quit")
+			return 0;
+		else if(vec_a=="a"){
+			cin>>op>>vec_b;
+			if(vec_b=="b"){
+				if(op=="+"){
+					MyVector c=a+b;
+					cout<<c;
+					//delete &c;
+				}
+				else if(op=="-"){
+					MyVector c=a-b;
+					cout<<c;
+					//delete &c;
+				}
+			}
+			else if(vec_b=="a"){
+				if(op=="+"){
+					MyVector c=a+a;
+					cout<<c;
+				}
+				else if(op=="-"){
+					MyVector c=a-a;
+					cout<<c;
+				}
+			}
+			else{
+				int num=atoi(vec_b.c_str());
+				if(op=="+"){
+					MyVector c=a+num;
+					cout<<c;
+					//delete &c;
+				}
+				else if(op=="-"){
+					MyVector c=a-num;
+					cout<<c;
+					//delete &c;
+				}
+			}
+		}
+		else if(vec_a=="b"){
+			cin>>op>>vec_b;
+			if(vec_b=="b"){
+				if(op=="+"){
+					MyVector c=b+b;
+					cout<<c;
+				}
+				else if(op=="-"){
+					MyVector c=b-b;
+					cout<<c;
+				}
+			}
+			else if(vec_b=="a"){
+				if(op=="+"){
+					MyVector c=b+a;
+					cout<<c;
+				}
+				else if(op=="-"){
+					MyVector c=b-a;
+					cout<<c;
+				}
+			}
+			else{
+				int num=atoi(vec_b.c_str());
+			if(op=="+"){
+				MyVector c=b+num;
+				cout<<c;
+			}
+			else if(op=="-"){
+				MyVector c=b-num;
+				cout<<c;
+			}
+		}
+		}
+	}
+}
+					
+
