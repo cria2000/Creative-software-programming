@@ -1,0 +1,8 @@
+git hub 의 오픈소스 중 하나를 다운받아 cmake . 명령어와 make명령어를 통해 build를 하는 활동을 하였다. 
+cmake를 가지고 있는 cmake-examples-master 파일을 다운받아 압축을 푼 다음, 01-basic이라는 파일 안의 A-hello-cmake파일을 들어갔다.
+그 파일 안에 들어가자, CMakeCache.tst, amke_install.cmake, Makefile, CMakeFiles, CMakeLists.txt, main.cpp, README.adoc이 들어있다.
+cmake . 라는 명령어를 실행하자, check, detecting, check, configuring, generating 등의 명령이 실행되었다.
+그리고 make를 하자, hello_cmake 실행파일이 생겼다.
+./hello_cmake명령어를 통해 hello_cmake실행파일을 실행하자 Hello CMake! 가 출력되었다.
+main함수에서 "Hello CMake!"를 출력하는 것만이 코딩되어 있었고, 그 main을 Makefile을 통해 build한 것이다. 
+항상 gcc만을 이용해서 파일을 compile해왔기 때문에 build가 이렇게 복잡할 수 있다는 것을 처음 알았다. 

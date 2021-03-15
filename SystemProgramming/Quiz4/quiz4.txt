@@ -1,0 +1,11 @@
+Quiz
+1. make이용해서 compile완료. (cgdb를 하면 segmentation fault가 난다.)
+2. gcc -I/home/raxis/include -g -c main.c
+gcc -I/home/raxis/include -g -c read.c
+gcc -I/home/raxis/include -g -c write.c
+gcc -o test main.o read.o write.o
+와 같은 결과가 나온다. 따라서  test, main.o, read.o, write.o가 다시 생긴다.
+3. gcc -I/home/raxis/include -g -c main.c
+gcc -o test main.o read.o write.o
+와 같은 결과가 나온다. 따라서  test, main.o, read.o, write.o가 다시 생긴다. 
+4. (main.c를 수정했음. 범위를 벗어난 index를 10의 범위 이내로 고쳐주고, 현재 a라는 배열에 아무값도 들어가있지 않으니 a의 0번째에 100이라는 임의의 값을 넣어주었다.)

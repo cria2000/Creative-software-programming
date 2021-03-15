@@ -1,0 +1,7 @@
+cat inputfile | tee fifo1 | tail의 tee는 실행하면, stdout과 fifo1에 모두 inputfile의 내용을 적어준다. 
+(파일에도 내용을 적고, 화면에도 내용을 출력해준다. )
+그러면 head fifo1은 inputfile의 내용이 적힌 fifo1의 앞 내용을 출력하고, 
+cat inputfile | tee fifo1 | tail은 결과적으로  inputfile의 내용이 적힌 fifo1의 뒷부분 내용을 출력해준다. 
+prog1은 inputfile을 tee를 수행하기 위해 넘겨주므로 stdin이며, 
+prog2는 tee가 화면에 내용을 출력하기 위해 사용되므로 stdout이고,  
+prog3은 FIFO를 통애 fifo1에 inputfile의 내용이 적히므로 stdout이다. 

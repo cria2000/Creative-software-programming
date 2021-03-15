@@ -1,0 +1,3 @@
+man cp
+ls -l
+head -15 /usr/include/stdio.h

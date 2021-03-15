@@ -1,0 +1,14 @@
+1. grep 'men' GrepMe 
+: GrepMe라는 이름을 가진 directory 나 file에서 men이라는 문자열을 가진 문장이나 파일을 출력
+2. grep 'fo*' GrepMe 
+: GrepMe라는 이름을 가진 directory 나 file에서 f와 그 뒤에 o가 0개 이상 나오는 문장이나 파일을 출력
+3. egrep 'fo+' GrepMe 
+: GrepMe라는 이름을 가진 directory 나 file에서 f와 그 뒤에 o가 1개 이상 나오는 문장이나 파일을 출력
+4. egrep -n '[Tt]he' GrepMe 
+: GrepMe라는 이름을 가진 directory 나 file에서 The나 the이라는 문자열을 가지는 문장이나 파일을 출력하는데, 각 문장의 앞에 문장의 행의 번호를 함께 출력. 
+5. fgrep 'The' GrepMe 
+: GrepMe라는 이름을 가진 file에서 The라는 문자열을 가지는 문장을 찾아 출력
+6. egrep 'NC+[0-9]*A?' GrepMe 
+: GrepMe라는 이름을 가진 directory 나 file에서 N 한글자와, C가 하나이상 나오고, 0부터 9까지의 수가 0개 이상 나오고, A가 하나 이하로 나오는 문자열을 가지는 문장이나 파일 출력.
+7. fgrep -f expfile GrepMe 
+:  GrepMe라는 이름을 가진 file에 있는 문자열 중 expfile에 있는 각 문장들 중 한 문장 이상과 일치하는 문자열들이 포함되어 있는 문장을 출력
